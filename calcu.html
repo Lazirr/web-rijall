@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rijal Maulana - Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="seluruh-web">
+
+    <div class="seluruh-container">
+
+        <div class="navbar">
+            <p class="judul">RIJAL MAULANA</p>
+            <div class="menu">
+                <a href="porto.html" class="a-">HOME</a>
+                <a href="about.html" class="a-">ABOUT</a>
+                <a href="contact.html" class="a-">CONTACT</a>
+                <a href="skill.html" class="a-">SKILL</a>
+                <a href="calcu.html" class="a-">CALCU</a>
+            </div>
+        </div>
+        
+        </section>
+         <section id="calcu">
+            <div>
+                <h2 style="padding: 50px;"></h2>
+                    <section id="calcu">
+                <div class="calcu-cont">
+                    <h2>Kalkulator Segitiga</h2>
+                        <label for="alas">Alas:</label>
+                    <input type="number" id="alas" placeholder="Masukkan alas">
+                        <label for="tinggi">Tinggi:</label>
+                    <input type="number" id="tinggi" placeholder="Masukkan tinggi">
+
+                <div class="tombol">
+                    <button onclick="hitungLuas()">Hitung Luas</button>
+                    <button onclick="hitungKeliling()">Hitung Keliling</button>
+                </div>
+                <p id="hasil"></p>
+            </div>
+        </section>
+
+            <script>
+                function hitungLuas() {
+                    const alas = parseFloat(document.getElementById("alas").value);
+                    const tinggi = parseFloat(document.getElementById("tinggi").value);
+                if (!alas || !tinggi) {
+                    document.getElementById("hasil").innerText = "Masukkan alas dan tinggi yang valid!";
+            return;
+            }
+                    const luas = (alas * tinggi) / 2;
+                    document.getElementById("hasil").innerText = "Luas segitiga: " + luas.toFixed(2);
+            }
+
+                function hitungKeliling() {
+                    const alas = parseFloat(document.getElementById("alas").value);
+                if (!alas) {
+                    document.getElementById("hasil").innerText = "Masukkan alas yang valid!";
+            return;
+            }
+                    const keliling = 3 * alas;
+                    document.getElementById("hasil").innerText = "Keliling segitiga (sama sisi): " + keliling.toFixed(2);
+            }
+            </script>
+
+        <div class="penutup">
+            <p>&copy; 2025 Rijal Maulana.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
